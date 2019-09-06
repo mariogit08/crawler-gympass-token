@@ -1,7 +1,7 @@
 import scrapy
 import logging
 
-class BrickSetSpider(scrapy.Spider):
+class CrawlerGymPassSpider(scrapy.Spider):
     name = "brickset_spider"
     start_urls = ['https://www.gympass.com/']
 
@@ -10,7 +10,7 @@ class BrickSetSpider(scrapy.Spider):
                           callback=self.parse_loggin)
     
     def parse_loggin(self, response):      
-        person_search_info = '09812092463'
+        person_search_info = '[cpf]'
         person_type = 'b2b'
         commit = 'Continuar'       
         utf8 = response.xpath('//input[@name="utf8"]/@value').get()
