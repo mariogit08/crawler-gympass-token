@@ -26,8 +26,8 @@ class BrickSetSpider(scrapy.Spider):
         url = 'https://www.gympass.com/pessoas/entrar'        
         utf8 = '%E2%9C%93'
         authenticity_token = response.xpath('//input[@name="authenticity_token"]/@value').get()                
-        person[email]: 'mario.chaves@live.com'
-        person[password]: 'Gym051943'
+        person[email]: 'emailConta'
+        person[password]: 'senhaConta'
         person[remember_me]: '0'
         person[remember_me]: '1'                        
         self.log(authenticity_token)
